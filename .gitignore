@@ -12,6 +12,7 @@ dist/
 venv/
 env/
 uv.lock
+.env
 
 # Test / type caches
 .pytest_cache/
