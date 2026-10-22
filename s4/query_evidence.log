@@ -1,0 +1,4 @@
+warm_total: 40
+query_count: 0
+latest_ts: 2026-04-29T12:05:28Z
+query_plan: SEARCH defects USING INDEX idx_defects_ts (ts>?)
