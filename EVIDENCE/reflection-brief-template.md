@@ -32,7 +32,7 @@ Replace each `→` with your answer. **Every answer cites at least one artifact 
 ### System 2 — Context strategy
 
 5. **The reduction.** From `budget.json`: baseline tokens, assembled tokens, reduction %. Which section dominates the assembled context, and why keep it verbatim?
-    → My run went from 38,708 tokens to 16,868, a 56.42% reduction (`s2/budget.json`). Most of what remains is the active issue: 15,789 tokens. I left that section verbatim because it is still being worked through, so losing a detail could change the next answer (`s2/context.md`).
+    → The active payment-method issue is still unresolved: the attempted card ending in 7782 hit `AVS_MISMATCH` (`s2/context.md`). In my run, that verbatim section takes 15,789 of the assembled 16,868 tokens (`s2/budget.json`). I kept its turns intact so the next troubleshooting response has the original details; only the refund and subscription threads are summarized.
 
 6. **Summarize vs preserve.** State the rule for what gets summarized vs kept byte-exact, citing your per-section token numbers.
     → I summarized the two closed threads and kept the current payment-method thread byte-exact. The refund and subscription summaries took 381 and 512 tokens; case facts took 204, compared with 15,789 for the active conversation (`s2/budget.json`). The byte-exact check and the budget consistency check both passed in `s2/tests.log`.
